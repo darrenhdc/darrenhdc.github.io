@@ -3,8 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title> Handong Cui</title>
+  <title>Handong Cui</title>
   <meta name="author" content="Handong Cui">
   <meta name="keywords" content="Handong Cui, HKU, Blockchain, Cryptography, Zero-knowledge Proof">
   <meta name="robots" content="index,follow">
@@ -384,6 +383,47 @@
     .scholar-btn:focus .scholar-icon {
       fill: #174ea6;
     }
+
+    /* Email Button Style */
+    .email-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 16px 5px 12px;
+      background: #f4f8fa;
+      color: #1967d2 !important;
+      font-weight: 500;
+      font-size: 1em;
+      border: 1px solid #bdd3f6;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 6px 0 12px 0;
+      box-shadow: 0 1px 4px rgba(66,133,244,0.07);
+      transition: background 0.18s, color 0.18s, border 0.18s, box-shadow 0.18s;
+      gap: 7px;
+      letter-spacing: 0.01em;
+      vertical-align: middle;
+      position: relative;
+      top: 2px;
+    }
+    .email-btn:hover, .email-btn:focus {
+      background: #eaf1fb;
+      color: #174ea6 !important;
+      border-color: #90b7f8;
+      box-shadow: 0 2px 8px rgba(66,133,244,0.13);
+      text-decoration: none;
+    }
+    .email-icon {
+      width: 19px;
+      height: 19px;
+      display: inline-block;
+      vertical-align: middle;
+      fill: #1967d2;
+      margin-right: 3px;
+    }
+    .email-btn:hover .email-icon,
+    .email-btn:focus .email-icon {
+      fill: #174ea6;
+    }
   </style>
 </head>
 
@@ -393,7 +433,16 @@
       <a href="https://darrenhdc.github.io" class="">Handong Cui</a>
     </b>
   </h1>
-<b>Ph.D. </b>(HKU CS) <br>
+  <b>Ph.D. </b>(HKU CS) <br>
+
+  <!-- Email Button -->
+  <a class="email-btn" href="mailto:hdcui@cs.hku.hk">
+    <svg class="email-icon" viewBox="0 0 24 24">
+      <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0v.01L12 13l8-8.99V4H4zm16 2.41l-8 8.99-8-8.99V20h16V6.41z" fill-opacity="0.8"/>
+    </svg>
+    Email
+  </a>
+  
   <!-- Google Scholar Button (elegant, academic) -->
   <a class="scholar-btn" href="https://scholar.google.com/citations?user=UMA849sAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank" rel="noopener">
     <svg class="scholar-icon" viewBox="0 0 24 24">
@@ -405,13 +454,16 @@
     Google Scholar
   </a>
 
-  
-  <p><small><code class="language-plaintext highlighter-rouge">hdcui[at]cs.hku.hk</code></small></p>
-  <a href="https://www.cs.hku.hk/" target="“blank”">Department of Computer Science (CS)</a><br>
-  <a href="https://www.hku.hk/" target="“blank”">The University of Hong Kong (HKU)</a> <br>
-
   <h2 id="bib">Biography</h2>
-  <p align="justify">Handong Cui obtained his Ph.D. degree from the Department of Computer Science at The University of Hong Kong in June 2024, under the supervision of <a href="https://thyuen.github.io/">Prof. John T. H. Yuen</a> and <a href="https://www.cs.hku.hk/people/academic-staff/smyiu">Prof. S. M. Yiu</a>. His research interests focus on cryptography, security and privacy.</p>
+  <p align="justify">
+    Handong Cui obtained his Ph.D. degree from the 
+    <a href="https://www.cs.hku.hk/" target="blank">Department of Computer Science (CS)</a> at 
+    <a href="https://www.hku.hk/" target="blank">The University of Hong Kong (HKU)</a> <br>
+    in June 2024, under the supervision of 
+    <a href="https://thyuen.github.io/">Prof. John T. H. Yuen</a> and 
+    <a href="https://www.cs.hku.hk/people/academic-staff/smyiu">Prof. S. M. Yiu</a>. 
+    His research interests focus on cryptography, security and privacy.
+  </p>
 
   <h2 id="publications">Publications </h2>
   <ul>
