@@ -10,6 +10,123 @@
   <meta name="description" content="Homepage of Handong Cui">
   <link href="./css" rel="stylesheet" type="text/css">
 
+
+<style>
+.pub-type {
+  font-weight: bold;
+  padding: 0 0.18em;
+  margin: 0 0.08em;
+  border-radius: 0.22em;
+  font-size: 0.97em;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+  font-family: inherit;
+  display: inline-block;
+  /* subtle background for better visibility */
+  background: rgba(0,0,0,0.03);
+}
+
+.pub-type-j {
+  color: #e91e63;
+  background: rgba(233,30,99,0.09); /* soft pink */
+}
+
+.pub-type-c {
+  color: #1976d2;
+  background: rgba(25,118,210,0.09); /* soft blue */
+}
+</style>
+
+
+<style>
+/* Rectangular, compact, clean publication tag */
+.pub-tag {
+  display: inline-block;
+  margin-left: 6px;
+  margin-bottom: 0;
+  padding: 1px 8px;
+  font-size: 0.76em;
+  font-weight: 500;
+  border-radius: 2px;   /* Almost square corners */
+  color: #fff;
+  vertical-align: middle;
+  background: #bdbdbd;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.35;
+  border: none;
+  opacity: 0.96;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: background 0.12s, color 0.12s;
+}
+
+.pub-conference   { 
+  background: linear-gradient(90deg, #009688 0%, #26d9b3 100%);
+  color: #fff;
+}
+.pub-journal      { 
+  background: linear-gradient(90deg, #607d8b 0%, #b0bec5 100%);
+  color: #fff;
+}
+.pub-ei           { 
+  background: linear-gradient(90deg, #003c8f 0%, #1976d2 100%);
+  color: #fff;
+}
+.pub-sci          { 
+  background: linear-gradient(90deg, #4a148c 0%, #7c43bd 100%);
+  color: #fff;
+}
+/* JCR-Q2 深粉色渐变 */
+.pub-jcr-q2       { 
+  background: linear-gradient(90deg, #ad1457 0%, #ec407a 100%);
+  color: #fff;
+}
+.pub-ccf-a        { 
+  background: linear-gradient(90deg, #f9d923 0%, #f7c873 100%);
+  color: #735c00;
+  border: 1px solid #ffef99;
+}
+.pub-ccf-b        { 
+  background: linear-gradient(90deg, #cd7f32 0%, #e0a96d 100%);
+  color: #3e2723;
+  border: 1px solid #e8c29e;
+}
+.pub-ccf-c        { 
+  background: linear-gradient(90deg, #4caf50 0%, #a8e063 100%);
+  color: #fff;
+}
+.pub-core-a       { 
+  background: linear-gradient(90deg, #e53935 0%, #ff7961 100%);
+  color: #fff;
+}
+.pub-core-b       { 
+  background: linear-gradient(90deg, #29b6f6 0%, #81d4fa 100%);
+  color: #fff;
+}
+.pub-core-a-star  { 
+  background: linear-gradient(90deg, #bfc1c2 0%, #e1e4ea 100%);
+  color: #434343;
+  border: 1px solid #e0e0e0;
+}
+
+/* Hover: slightly darker */
+.pub-tag:hover {
+  filter: brightness(0.93) contrast(1.1);
+  opacity: 1;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .pub-tag {
+    font-size: 0.85em;
+    padding: 2px 10px;
+    border-radius: 2px;
+  }
+}
+</style>
+
+
+
   <style>
     /* --- jemdoc styles.css --- */
     table#tlayout {
@@ -525,81 +642,197 @@
     </li>
   </ul>
 </div>
-  
-  <h2 id="publications">Publications </h2>
-  <ul>
 
-        <li>
-      <a href="#" target="_blank">
-        The Latest Advances and Outlooks in Post-quantum Cryptography Technology
-      </a>
-      <br>Feng Zhang, Yan Zhuang, Le Yu, Shuo Sun, <strong>Handong Cui</strong>, Yusheng Ma.
-      <br>Accepted in 
-      <a href="http://ictp.caict.ac.cn/EN/2096-5931/home.shtml" target="_blank" rel="noopener">
-        <i>Information and Communications Technology and Policy</i>
-      </a>, China Academy of Information and Communications Technology (CAICT), 2025.
-    </li>
-    <li>
-      <a href="#" target="_blank">
-        Towards Practical Privacy-Preserving AI: Applications of Fully Homomorphic Encryption in Learning Models
-      </a>
-      <br>Feng Zhang, Yan Zhuang, Le Yu, <strong>Handong Cui</strong>, Shuo Sun, Yusheng Ma.
-      <br>Accepted at 
-      <a href="https://link.springer.com/conference/icfeict" target="_blank" rel="noopener">
-        <i>The 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025)</i>
-      </a>, 2025.
-    </li>
-    <li>
-      <div> <a href="https://eprint.iacr.org/2023/1056.pdf"> DIDO: Data Provenance from Restricted TLS 1.3 Websites</a> </div>
-      Kwan Yin Chan, <strong>Handong Cui</strong>,  Tsz Hon Yuen.
-      <br>Published in <i>The 18th International Conference on Information Security Practice and Experience, Springer., </i>2023. (<b>ISPEC 2023</b>) </li>
-    <p> </p>
-    <li>
-      <div> <a href="https://eprint.iacr.org/2023/1312.pdf">Efficient Multiplicative-to-Additive Function from Joye-Libert Cryptosystem and Its Application to Threshold ECDSA </a> </div>
-      Haiyang Xue, Man Ho Au, Mengling Liu, Kwan Yin Chan, <strong>Handong Cui</strong>, Xiang Xie, Tsz Hon Yuen, Chengru Zhang.
-      <br>Published in <i> The 30th ACM Conference on Computer and Communications Security, ACM.</i>, 2023. (<b>CCS 2023</b>)
-      <p> </p>
-    <li>
-      <div> <a href="./compj-2023.pdf"> Bandwidth-Efficient Zero-Knowledge Proofs for Threshold ECDSA </a> </div>
-      <strong>Handong Cui</strong>, Kwan Yin Chan, Tsz Hon Yuen, Xin Kang, Cheng-Kang Chu.
-      <br>Published in <i> The Computer Journal, Oxford University Press.,</i>2023. (<b>COMPJ 2023</b>) </li>
-    <p> </p>
-    <li>
-      <div> <a href="./acisp22.pdf">Multi-signatures for ECDSA and Its Applications in Blockchain</a> </div>
-      Shimin Pan, Kwan Yin Chan, <strong>Handong Cui</strong>,  Tsz Hon Yuen.
-      <br>Published in <i>The 27th Australasian Conference on Information Security and Privacy, Springer.</i>, 2022. (<b>ACISP 2022</b>) </li>
-    <p> </p>
-    <li>
-      <div> <a href="https://eprint.iacr.org/2021/664.pdf">A Trustless GQ Multi-Signature Scheme with Identifiable Abort </a> </div>
-      <strong>Handong Cui</strong>,  Tsz Hon Yuen.
-      <br>Published in <i>The 26th Australasian Conference on Information Security and Privacy, Springer.</i>, 2021. (<b>ACISP 2021</b>) </li>
-    <p> </p>
-    <li>
-      <div> <a href="https://haiyangxc.github.io/hyxue/paper-doc/XAX21.pdf">Efficient Online-friendly Two-party ECDSA Signature </a> </div>
-      Haiyang Xue, Man Ho Au, Xiang Xie, Tsz Hon Yuen, <strong>Handong Cui</strong>.
-      <br>Published in <i> The 28th ACM Conference on Computer and Communications Security, ACM.</i>, 2021. (<b>CCS 2021</b>) </li>
-    <p> </p>
-    <li>
-      <div> <a href="https://eprint.iacr.org/2021/205.pdf">Compact Zero-Knowledge Proofs for Threshold ECDSA with Trustless Setup</a> </div>
-      Tsz Hon Yuen, <strong>Handong Cui</strong>, Xiang Xie.
-      <br>Published in <i>The 24th edition of the International Conference on Practice and Theory of Public-Key Cryptography, IACR.</i>, 2021. (<b>PKC 2021</b>)  </li>
-    <p> </p>
-    <li>
-      <div> <a href="https://github.com/darrenhdc/darrenhdc.github.io/blob/main/inscrypt2021.pdf">New location privacy preserving schemes based on ring signature over mobile social networks</a> </div>
-      Cailing Cai, Tsz Hon Yuen, <strong>Handong Cui</strong>, Mingli Wu, Siu Ming Yiu.
-      <br>Published in <i>The 16th Information Security and Cryptology: 16th International Conference, Springer.</i>, 2021. (<b>Inscrypt 2021</b>)  </li>
-    <p> </p>
-    <li>
-      <div> <a href="./rka-sm2.pdf">Security on SM2 and GOST Signatures against Related Key Attacks</a> </div>
-      <strong>Handong Cui</strong>, Xianrui Qin, Cailing Cai, Tsz Hon Yuen.
-      <br>Published in <i>The 20th IEEE International Conference On Trust, Security And Privacy In Computing And Communications, IEEE.</i>, 2021. (<b>TrustCom 2021</b>)  </li>
-    <p> </p>
-    <li>
-      <div> <a href="./addr.pdf">Address-based Signature</a> </div>
-      <strong>Handong Cui</strong>, Tsz Hon Yuen.
-      <br>Published in <i>The 19th IEEE International Conference On Trust, Security And Privacy In Computing And Communications, IEEE.</i>, 2020. (<b>TrustCom 2020</b>)  </li>
-    <p> </p>
-  </ul>
+
+
+
+<h2 id="publications">Publications</h2>
+<ul>
+  <li>
+    <span class="pub-type pub-type-j">Ⓙ</span>
+    <a href="#" target="_blank">
+      The Latest Advances and Outlooks in Post-quantum Cryptography Technology
+    </a>
+    <br>
+    Feng Zhang, Yan Zhuang, Le Yu, Shuo Sun, <strong>Handong Cui</strong>, Yusheng Ma.
+    <br>
+    Accepted in
+    <a href="http://ictp.caict.ac.cn/EN/2096-5931/home.shtml" target="_blank" rel="noopener">
+      <i>Information and Communications Technology and Policy</i>
+    </a>, China Academy of Information and Communications Technology (CAICT), 2025.
+    <div class="pub-tags"></div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="#" target="_blank">
+      Towards Practical Privacy-Preserving AI: Applications of Fully Homomorphic Encryption in Learning Models
+    </a>
+    <br>
+    Feng Zhang, Yan Zhuang, Le Yu, <strong>Handong Cui</strong>, Shuo Sun, Yusheng Ma.
+    <br>
+    Accepted at
+    The 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Springer, 2025.
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="https://eprint.iacr.org/2023/1056.pdf">
+      DIDO: Data Provenance from Restricted TLS 1.3 Websites
+    </a>
+    <br>
+    Kwan Yin Chan, <strong>Handong Cui</strong>, Tsz Hon Yuen.
+    <br>
+    Published in <i>The 18th International Conference on Information Security Practice and Experience, Springer.</i>, 2023. (<b>ISPEC 2023</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-core-b">Core-B</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="https://eprint.iacr.org/2023/1312.pdf">
+      Efficient Multiplicative-to-Additive Function from Joye-Libert Cryptosystem and Its Application to Threshold ECDSA
+    </a>
+    <br>
+    Haiyang Xue, Man Ho Au, Mengling Liu, Kwan Yin Chan, <strong>Handong Cui</strong>, Xiang Xie, Tsz Hon Yuen, Chengru Zhang.
+    <br>
+    Published in <i>The 30th ACM Conference on Computer and Communications Security, ACM.</i>, 2023. (<b>CCS 2023</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-a">CCF-A</span>
+      <span class="pub-tag pub-core-a-star">Core-A*</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-j">Ⓙ</span>
+    <a href="./compj-2023.pdf">
+      Bandwidth-Efficient Zero-Knowledge Proofs for Threshold ECDSA
+    </a>
+    <br>
+    <strong>Handong Cui</strong>, Kwan Yin Chan, Tsz Hon Yuen, Xin Kang, Cheng-Kang Chu.
+    <br>
+    Published in <i>The Computer Journal, Oxford University Press.</i>, 2023. (<b>COMPJ 2023</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-sci">SCI</span>
+      <span class="pub-tag pub-ccf-b">CCF-B</span>
+      <span class="pub-tag pub-jcr-q2">JCR-Q2</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="./acisp22.pdf">
+      Multi-signatures for ECDSA and Its Applications in Blockchain
+    </a>
+    <br>
+    Shimin Pan, Kwan Yin Chan, <strong>Handong Cui</strong>, Tsz Hon Yuen.
+    <br>
+    Published in <i>The 27th Australasian Conference on Information Security and Privacy, Springer.</i>, 2022. (<b>ACISP 2022</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-c">CCF-C</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="https://eprint.iacr.org/2021/664.pdf">
+      A Trustless GQ Multi-Signature Scheme with Identifiable Abort
+    </a>
+    <br>
+    <strong>Handong Cui</strong>, Tsz Hon Yuen.
+    <br>
+    Published in <i>The 26th Australasian Conference on Information Security and Privacy, Springer.</i>, 2021. (<b>ACISP 2021</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-c">CCF-C</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="https://haiyangxc.github.io/hyxue/paper-doc/XAX21.pdf">
+      Efficient Online-friendly Two-party ECDSA Signature
+    </a>
+    <br>
+    Haiyang Xue, Man Ho Au, Xiang Xie, Tsz Hon Yuen, <strong>Handong Cui</strong>.
+    <br>
+    Published in <i>The 28th ACM Conference on Computer and Communications Security, ACM.</i>, 2021. (<b>CCS 2021</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-a">CCF-A</span>
+      <span class="pub-tag pub-core-a-star">Core A*</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="https://eprint.iacr.org/2021/205.pdf">
+      Compact Zero-Knowledge Proofs for Threshold ECDSA with Trustless Setup
+    </a>
+    <br>
+    Tsz Hon Yuen, <strong>Handong Cui</strong>, Xiang Xie.
+    <br>
+    Published in <i>The 24th edition of the International Conference on Practice and Theory of Public-Key Cryptography, IACR.</i>, 2021. (<b>PKC 2021</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-b">CCF-B</span>
+      <span class="pub-tag pub-core-b">Core-B</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="https://github.com/darrenhdc/darrenhdc.github.io/blob/main/inscrypt2021.pdf">
+      New location privacy preserving schemes based on ring signature over mobile social networks
+    </a>
+    <br>
+    Cailing Cai, Tsz Hon Yuen, <strong>Handong Cui</strong>, Mingli Wu, Siu Ming Yiu.
+    <br>
+    Published in <i>The 16th Information Security and Cryptology: 16th International Conference, Springer.</i>, 2021. (<b>Inscrypt 2021</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-c">CCF-C</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="./rka-sm2.pdf">
+      Security on SM2 and GOST Signatures against Related Key Attacks
+    </a>
+    <br>
+    <strong>Handong Cui</strong>, Xianrui Qin, Cailing Cai, Tsz Hon Yuen.
+    <br>
+    Published in <i>The 20th IEEE International Conference On Trust, Security And Privacy In Computing And Communications, IEEE.</i>, 2021. (<b>TrustCom 2021</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-c">CCF-C</span>
+      <span class="pub-tag pub-core-a">Core-A</span>
+    </div>
+  </li>
+
+  <li>
+    <span class="pub-type pub-type-c">Ⓒ</span>
+    <a href="./addr.pdf">
+      Address-based Signature
+    </a>
+    <br>
+    <strong>Handong Cui</strong>, Tsz Hon Yuen.
+    <br>
+    Published in <i>The 19th IEEE International Conference On Trust, Security And Privacy In Computing And Communications, IEEE.</i>, 2020. (<b>TrustCom 2020</b>)
+    <div class="pub-tags">
+      <span class="pub-tag pub-ei">EI</span>
+      <span class="pub-tag pub-ccf-c">CCF-C</span>
+      <span class="pub-tag pub-core-a">Core-A</span>
+    </div>
+  </li>
+</ul>
 
   <h2 id="teaching">Teaching Assistant</h2>
   <ul>
