@@ -12,6 +12,24 @@
 
 
 <style>
+
+
+
+
+/* Prevent font scaling when zooming out */
+body {
+  font-size: 16px; /* Default font size */
+}
+
+@media (min-width: 960px) {
+  body {
+    font-size: 16px; /* Boundary for zooming out */
+  }
+}
+
+h1, h2, h3, p, ul, li {
+  font-size: inherit; /* Ensure all elements inherit the base font size */
+}
 .pub-type {
   font-weight: bold;
   padding: 0 0.18em;
@@ -35,9 +53,7 @@
   color: #1976d2;
   background: rgba(25,118,210,0.09); /* soft blue */
 }
-</style>
 
-<style>
 /* Rectangular, compact, clean publication tag */
 .pub-tag {
   display: inline-block;
@@ -602,7 +618,9 @@
 </a>
 
   <h2 id="bib">Biography</h2>
+
   <p align="justify">
+     
     Handong Cui obtained his Ph.D. degree from the 
     <a href="https://www.cs.hku.hk/" target="blank">Department of Computer Science (CS)</a> at 
     <a href="https://www.hku.hk/" target="blank">The University of Hong Kong (HKU)</a> in June 2024, under the supervision of 
@@ -611,8 +629,8 @@
 
     His research interests focus on cryptography.
     <br>
-    
-    <ul>
+       <ul>
+
         <li>Zero-knowledge proof</li>
         <li>Threshold cryptography</li>
         <li>Secure multi-party computation</li>
