@@ -12,7 +12,97 @@
 
 
 <style>
+#education {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+.timeline {
+    position: relative;
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #ccc;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 60px; /* Adjusted to make space for icons */
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 0; /* Align the icon with the timeline line */
+    top: 0;
+    width: 45px; /* Increased width for better visibility */
+    height: 45px; /* Increased height for better visibility */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Ensures the image fits inside the circle */
+    display: flex; /* Centers the image */
+    align-items: center; /* Centers the image vertically */
+    justify-content: center; /* Centers the image horizontally */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional shadow for a polished look */
+}
+
+.timeline-icon img {
+    width: 80%; /* Ensures the image fills the container */
+    height: 80%; /* Ensures the image fills the container */
+    object-fit: contain; /* Ensures the image is fully visible and scaled proportionally */
+    border-radius: 20%; /* Keeps the image circular */
+}
+
+.timeline-date {
+    font-size: 12px;
+    color: #777;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin: 0 0 3px;
+    font-size: 16px;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-item {
+        padding-left: 50px; /* Adjusted padding for smaller screens */
+    }
+
+    .timeline-icon {
+        width: 30px; /* Smaller icon for mobile */
+        height: 30px;
+    }
+}
 
 
 
@@ -641,7 +731,7 @@ h1, h2, h3, p, ul, li {
 
   </p>
 
-<h2 id="education">Education Background</h2>
+<!-- <h2 id="education">Education Background</h2>
 <ul>
   <li>
     <strong>Ph.D. in Computer Science</strong>, The University of Hong Kong, Hong Kong SAR, China, 2019.9&nbsp;–&nbsp;2024.6
@@ -650,7 +740,40 @@ h1, h2, h3, p, ul, li {
     <strong>B.E. in Information Security</strong>, Sichuan University, Chengdu, China, 2015.9&nbsp;–&nbsp;2019.6
   </li>
 
-</ul>
+</ul> -->
+
+
+
+  <h2>Education Background</h2>
+
+
+<div class="timeline">
+    <!-- First Education Experience -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <img src="icon1.png" alt="Ph.D. Icon">
+        </div>
+        <div class="timeline-date">2019.9 – 2024.6</div>
+        <div class="timeline-content">
+            <h3>Ph.D. in Computer Science</h3>
+            <p>The University of Hong Kong (HKU)</p>
+            <p>Hong Kong SAR, China</p>
+        </div>
+    </div>
+
+    <!-- Second Education Experience -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <img src="icon2.png" alt="B.E. Icon">
+        </div>
+        <div class="timeline-date">2015.9 – 2019.6</div>
+        <div class="timeline-content">
+            <h3>B.E. in Information Security</h3>
+            <p>Sichuan University (SCU)</p>
+            <p>Chengdu, China</p>
+        </div>
+    </div>
+</div>
 
 <!-- <h2 id="experience">Working Experience</h2>
 <ul>
@@ -667,8 +790,6 @@ h1, h2, h3, p, ul, li {
     <strong>Research Intern</strong>, Computer Science Department, HKU, Hong Kong SAR, 2018.7&nbsp;–&nbsp;2018.8
   </li>
 </ul> -->
-
-
 
 
 
@@ -906,6 +1027,8 @@ h1, h2, h3, p, ul, li {
   </ul>
 </div>
 
+
+
   <h2 id="teaching">Teaching Assistant</h2>
   <ul>
     <li> [CSST9080] FinTech: Financial Inclusion, Emerging Markets and Social Value, UG, HKU, Spring 2022/2023. </li>
@@ -932,7 +1055,7 @@ h1, h2, h3, p, ul, li {
 <h2 id="service">External Reviewer</h2>
 <ul>
   <li>
-    <b>2025</b>: CMC 2025
+    <b>2025</b>: TDSC 2025, CMC 2025
   </li>
   <li>
     <b>2024</b>: TIFS 2024
