@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,78 @@
   <meta name="robots" content="index,follow">
   <meta name="description" content="Homepage of Handong Cui">
   <link href="./css" rel="stylesheet" type="text/css">
+
+ <style>
+    /* Section for the certificate wall */
+    .certificate-wall {
+      display: flex;
+      flex-wrap: wrap;
+      /*justify-content: center;*/
+      gap: 10px;
+      max-width: 1000px;
+      padding: 5px;
+    }
+
+    /* Individual certificate cards */
+    .certificate {
+      width: 150px;
+      height: 100px; /* Fixed height */
+      background: linear-gradient(145deg, #e8e8e8, #fdfdfd, #d9d9d9); /* Silver gradient */
+      box-shadow: 
+        0 10px 15px rgba(0, 0, 0, 0.1), /* Outer shadow */
+        inset 0 10px 15px rgba(255, 255, 255, 0.5), /* Inner highlight */
+        inset -5px -5px 10px rgba(0, 0, 0, 0.1); /* Inner shadow */
+      border: 1px solid #ddd; /* Light gray border */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333; /* Dark gray text */
+      padding: 10px; /* Padding for text spacing */
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth animation */
+    }
+
+    /* Hover effect: elevate and enhance shadow */
+    .certificate:hover {
+      transform: translateY(-10px); /* Lift up */
+      box-shadow: 
+        0 15px 25px rgba(0, 0, 0, 0.2), /* Deeper outer shadow */
+        inset 0 15px 20px rgba(255, 255, 255, 0.6), /* Brighter inner highlight */
+        inset -5px -5px 15px rgba(0, 0, 0, 0.15); /* More pronounced inner shadow */
+    }
+
+    /* Hyperlink styles */
+    .certificate a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Certificate title styles */
+    .certificate-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 8px; /* Space between title and issuer */
+    }
+
+    /* Certificate issuer styles */
+    .certificate-issuer {
+      font-size: 12px;
+      font-weight: normal;
+      color: #666; /* Lighter gray for issuer name */
+    }
+  </style>
 
 
 <style>
@@ -245,6 +318,8 @@ h1, h2, h3, p, ul, li {
   }
 }
 </style>
+
+
   <style>
     /* --- jemdoc styles.css --- */
     table#tlayout {
@@ -712,11 +787,10 @@ h1, h2, h3, p, ul, li {
   <p align="justify">
      
     Handong Cui obtained his Ph.D. degree from the 
-    <a href="https://www.cs.hku.hk/" target="blank">Department of Computer Science (CS)</a> at 
-    <a href="https://www.hku.hk/" target="blank">The University of Hong Kong (HKU)</a> in June 2024, under the supervision of 
+    <a href="https://www.cs.hku.hk/" target="blank">Department of Computer Science (CS)</a> <br>at 
+    <a href="https://www.hku.hk/" target="blank">The University of Hong Kong (HKU)</a>  under the supervision of 
     <a href="https://thyuen.github.io/">Prof. John T. H. Yuen</a> and 
     <a href="https://www.cs.hku.hk/people/academic-staff/smyiu">Prof. S. M. Yiu</a>. 
-
     His research interests focus on cryptography.
     <br>
        <ul>
@@ -1077,6 +1151,57 @@ h1, h2, h3, p, ul, li {
   </li>
 </ul>
 
+
+<h2 id="service">Certifications</h2>
+<ul>
+
+ <!-- Certificate wall section -->
+  <div class="certificate-wall">
+    <!-- Certificate 1 -->
+    <div class="certificate">
+      <a href="https://www.coursera.org/account/accomplishments/specialization/C3GUU6D6WSGU" target="_blank">
+        <div class="certificate-title">Machine Learning Specialization</div>
+        <div class="certificate-issuer">DeepLearning.AI, Stanford University</div>
+      </a>
+    </div>
+    <!-- Certificate 2 -->
+         <div class="certificate">
+      <a href="https://www.coursera.org/account/accomplishments/specialization/QHDUMNSRAECT" target="_blank">
+        <div class="certificate-title">Deep Learning Specialization</div>
+        <div class="certificate-issuer">DeepLearning.AI</div>
+      </a>
+    </div>
+    <!-- Certificate 3 -->
+       <div class="certificate">
+      <a href="https://www.coursera.org/account/accomplishments/specialization/KAKLLQB3NY8K" target="_blank">
+        <div class="certificate-title">Risk Management Specialization</div>
+        <div class="certificate-issuer">New York Institute of Finance</div>
+      </a>
+    </div>
+    <!-- Certificate 4 -->
+    <div class="certificate">
+      <a href="https://www.coursera.org/account/accomplishments/specialization/PKNEEJLWXCXV" target="_blank">
+        <div class="certificate-title">Finance & Quantitative Modeling for Analysts Specialization</div>
+        <div class="certificate-issuer">University of Pennsylvania</div>
+      </a>
+    </div>
+    <!-- Certificate 5 -->
+    <div class="certificate">
+      <a href="https://www.coursera.org/account/accomplishments/specialization/HXWBGH7Z22D8" target="_blank">
+        <div class="certificate-title">Investment and Portfolio Management Specialization</div>
+        <div class="certificate-issuer">Rice University</div>
+      </a>
+    </div>
+    <!-- Certificate 6 -->
+    <div class="certificate">
+      <a href="https://www.coursera.org/account/accomplishments/specialization/NTP8R2CHFP4A" target="_blank">
+        <div class="certificate-title">Decentralized Finance (DeFi): The Future of Finance Specialization</div>
+        <div class="certificate-issuer">Duke University</div>
+      </a>
+    </div>
+  </div>
+
+</ul>
   <div id="footer">
     <p><small>Copyright © Darren Cui 2025.</small></p>
   </div>
