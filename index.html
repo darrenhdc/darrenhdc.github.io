@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,21 @@
   <meta name="robots" content="index,follow">
   <meta name="description" content="Homepage of Handong Cui">
   <link href="./css" rel="stylesheet" type="text/css">
+  
+    <style>
+        /* Resize the globe container */
+        #globe {
+            width: 300px; /* Set the desired width */
+            height: 300px; /* Set the desired height */
+            margin: 0 auto; /* Center the globe on the page */
+        }
+
+        /* Scale down the globe inside the container */
+        #clstr_globe {
+            transform: scale(0.75); /* Adjust the scale factor (e.g., 0.5 for 50%) */
+            transform-origin: center; /* Keep scaling centered */
+        }
+    </style>
 
   <style>
     /* Section for the certificate wall */
@@ -334,8 +350,9 @@
 
 <body>
   <h1><b><a href="https://darrenhdc.github.io" class="">Handong Cui</a></b></h1>
+  <p><img src="./darren.png" alt="hdcui-photo" width="160" align="right" offset="90px" style="padding:10px;border-radius: 15px">
   <b>Ph.D. </b> (HKU CS) <br>
-
+  <br>
   <a class="email-btn" href="mailto:hdcui@cs.hku.hk">
     <svg class="email-icon" viewBox="0 0 24 24">
       <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0v.01L12 13l8-8.99V4H4zm16 2.41l-8 8.99-8-8.99V20h16V6.41z" fill-opacity="0.8"/>
@@ -368,6 +385,7 @@
     </svg>
     LinkedIn
   </a>
+  <br>
 
   <h2 id="bib">Biography</h2>
   <p align="justify">
@@ -386,6 +404,7 @@
       <li>Security and privacy in blockchain</li>
     </ul>
   </p>
+
 
   <h2>Education Background</h2>
   <div class="timeline">
@@ -415,8 +434,8 @@
 
   <h2 id="experience">Working Experience</h2>
   <ul>
-    <li><strong>Research Engineer</strong>, Cyber Security and Cryptography, China Mobile Internet Co., Ltd, 2024.6&nbsp;–&nbsp;present.</li>
-    <li><strong>Student Trainee (Internship)</strong>, Investment Risk Management, APG Investment Asia Ltd, Hong Kong SAR, 2022.4&nbsp;–&nbsp;2022.8</li>
+    <li><strong>Technology Specialist</strong>, China Mobile Internet Co., Ltd, Guangzhou, 2024.6&nbsp;–&nbsp;2025.9</li>
+    <li><strong>Student Trainee </strong>,  APG Investment Asia Ltd, Hong Kong SAR, 2022.4&nbsp;–&nbsp;2022.8</li>
     <li><strong>Research Intern</strong>, Computer Science Department, HKU, Hong Kong SAR, 2019.2&nbsp;–&nbsp;2019.5</li>
     <li><strong>Research Intern</strong>, Computer Science Department, HKU, Hong Kong SAR, 2018.7&nbsp;–&nbsp;2018.8</li>
   </ul>
@@ -680,6 +699,11 @@
     <li><b>2020</b>: ISC 2020, Inscrypt 2020, ICICS 2020, ACISP 2020</li>
     <li><b>2019</b>: NSS 2019, ICICS 2019</li>
   </ul> -->
+  <!-- ClustrMaps Globe -->
+    <div id="globe">
+        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5q51dVLX3w-dEM6GyqJMSqoDQYSsUfm69zcx5Gb-rhU"></script>
+    </div>
+
 
   <div id="footer">
     <p><small>Copyright © Darren Cui 2025.</small></p>
