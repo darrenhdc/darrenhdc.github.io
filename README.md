@@ -1,1 +1,1 @@
-wellcome to my website
+welcome to my website
