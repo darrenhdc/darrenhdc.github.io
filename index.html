@@ -3,743 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handong Cui (Darren) - Digital Architect of Blockchain & Cryptography</title>
+    <title>Handong Cui (Darren) — Ph.D., Cryptography & Web3</title>
     <meta name="author" content="Handong Cui">
     <meta name="keywords" content="Handong Cui, HKU, Blockchain, Cryptography, Zero-knowledge Proof">
-    <meta name="description" content="Handong Cui (Darren) - Ph.D. in Computer Science, HKU. Research in cryptography, security and privacy issue in blockchain.">
+    <meta name="description" content="Handong Cui (Darren) — Ph.D. in Computer Science, HKU. Research in cryptography, security and privacy in blockchain.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS Variables */
         :root {
-            --bg-primary: #0f0f11;
-            --bg-secondary: #16161a;
-            --bg-card: rgba(255, 255, 255, 0.05);
-            --bg-card-hover: rgba(255, 255, 255, 0.07);
-            --text-primary: #ffffff;
-            --text-secondary: #a0aec0;
-            --text-muted: #718096;
-            --accent-color: #4fd1c5;
-            --accent-hover: #38b2ac;
-            --border-color: rgba(255, 255, 255, 0.1);
-            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.2);
-            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.3);
+            --text: #16181d;
+            --text-secondary: #42474f;
+            --text-muted: #6b7280;
+            --accent: #1f3a5f;
+            --link: #1a4f8a;
+            --rule: #d9dde3;
+            --bg: #ffffff;
+            --bg-soft: #f6f7f9;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-        }
+        html { scroll-behavior: smooth; }
 
         body {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 6rem;
-            position: relative;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
-        /* Sticky Navigation */
-        .nav {
-            position: sticky;
-            top: 2rem;
-            z-index: 1000;
-            margin: 2rem 0;
-        }
-
-        .nav-content {
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.25rem 2rem;
-            display: flex;
-            justify-content: flex-end;
-            gap: 3rem;
-            box-shadow: var(--shadow-md);
-        }
-
-        .nav a {
-            color: var(--text-secondary);
+        a {
+            color: var(--link);
             text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            position: relative;
-            transition: all 0.3s ease;
+            transition: color 0.15s ease;
+        }
+        a:hover { color: var(--accent); text-decoration: underline; }
+
+        .wrap {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .nav a:hover {
-            color: var(--accent-color);
+        /* Nav */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: saturate(180%) blur(8px);
+            border-bottom: 1px solid var(--rule);
         }
-
-        .nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 4rem 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
+        .nav-inner {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
             align-items: center;
+            justify-content: space-between;
         }
-
-        .hero-content h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 6vw, 6rem);
+        .nav-brand {
+            font-family: "Crimson Pro", Georgia, serif;
             font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.05rem;
+            color: var(--text);
+            letter-spacing: 0.2px;
         }
-
-        .hero-content h2 {
-            font-size: clamp(1.25rem, 2vw, 1.75rem);
-            font-weight: 400;
+        .nav-links a {
             color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            max-width: 700px;
+            margin-left: 20px;
+            font-size: 0.92rem;
         }
+        .nav-links a:hover { color: var(--accent); text-decoration: none; }
 
-        .hero-content .roles {
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-
-
-
-        .social-links {
+        /* Header */
+        header.site {
+            padding: 64px 0 40px;
+            border-bottom: 1px solid var(--rule);
             display: flex;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            align-items: flex-start;
+            gap: 32px;
         }
-
-        .social-links a {
-            width: 48px;
-            height: 48px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+        .head-photo {
+            flex: 0 0 auto;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            object-fit: cover;
+            border: 1px solid var(--rule);
+        }
+        .head-text { flex: 1 1 auto; min-width: 0; }
+        header.site h1 {
+            font-family: "Crimson Pro", Georgia, serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin: 0 0 6px;
+            letter-spacing: -0.3px;
+        }
+        header.site .tagline {
             color: var(--text-secondary);
-            font-size: 1.25rem;
-            transition: all 0.3s ease;
+            font-size: 1.08rem;
+            margin: 0 0 14px;
         }
+        header.site .meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .social {
+            margin-top: 16px;
+            display: flex;
+            gap: 14px;
+        }
+        .social a {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+        }
+        .social a:hover { color: var(--accent); text-decoration: none; }
 
-        .social-links a:hover {
-            background: var(--accent-color);
-            color: var(--bg-primary);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Section General Styles */
-        section {
-            padding: 4rem 0;
-        }
+        /* Sections */
+        section { padding: 40px 0; border-bottom: 1px solid var(--rule); }
+        section:last-of-type { border-bottom: none; }
 
         .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-family: "Crimson Pro", Georgia, serif;
             font-weight: 700;
-            margin-bottom: 4rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent-color);
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--bg-secondary);
-            border-radius: 24px;
-            padding: 4rem;
-            margin: 4rem 0;
-        }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .about-content p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-
-        /* Experience Section */
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .experience-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .experience-card:hover {
-            background: var(--bg-card-hover);
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent-color);
-        }
-
-        .experience-date {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 0.75rem;
-        }
-
-        .experience-position {
-            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            line-height: 1.3;
+            color: var(--accent);
+            margin: 0 0 22px;
+            letter-spacing: 0.1px;
         }
 
-        .experience-company {
-            color: var(--accent-color);
-            font-size: 1.125rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
+        /* About */
+        .about p { margin: 0 0 14px; color: var(--text-secondary); }
+        .about p:last-child { margin-bottom: 0; }
 
-        /* Publications Section */
-        .publications-grid {
+        /* Experience */
+        .exp-list { list-style: none; margin: 0; padding: 0; }
+        .exp-list li {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 2rem;
-            margin: 4rem 0;
+            grid-template-columns: 1fr auto;
+            gap: 4px 24px;
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--rule);
         }
-
-        .publication-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-            grid-column: span 6;
-        }
-
-        .publication-card:hover {
-            background: var(--bg-card-hover);
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent-color);
-        }
-
-        .publication-type {
-            display: inline-block;
-            padding: 0.5rem 1.25rem;
-            background: var(--accent-color);
-            color: var(--bg-primary);
-            border-radius: 24px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .publication-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .publication-title a {
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-
-        .publication-title a:hover {
-            color: var(--accent-color);
-        }
-
-        .publication-authors {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .publication-venue {
+        .exp-list li:last-child { border-bottom: none; }
+        .exp-role { font-weight: 600; color: var(--text); }
+        .exp-org { color: var(--text-secondary); font-size: 0.95rem; }
+        .exp-date {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+            align-self: start;
+            padding-top: 2px;
+        }
+        @media (max-width: 560px) {
+            header.site { flex-direction: column; align-items: center; text-align: center; }
+            .head-photo { width: 110px; height: 110px; }
+            .social { justify-content: center; flex-wrap: wrap; }
         }
 
-        .publication-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .publication-tag {
-            padding: 0.375rem 0.875rem;
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            border-radius: 12px;
-            font-size: 0.8125rem;
-            font-weight: 500;
-        }
-
-        /* Projects, Patents, Teaching Sections */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .content-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .content-card:hover {
-            background: var(--bg-card-hover);
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .content-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .content-card ul {
+        /* Publications */
+        ol.pubs {
+            margin: 0;
+            padding-left: 1.4em;
+            counter-reset: pub;
             list-style: none;
         }
-
-        .content-card li {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-            padding-left: 2rem;
+        ol.pubs > li {
             position: relative;
+            padding: 10px 0 10px 0.4em;
+            margin-bottom: 4px;
+            border-bottom: 1px dashed var(--rule);
+            counter-increment: pub;
         }
-
-        .content-card li::before {
-            content: '▸';
+        ol.pubs > li:last-child { border-bottom: none; }
+        ol.pubs > li::before {
+            content: "[" counter(pub) "]";
             position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: 700;
+            left: -1.4em;
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+            font-size: 0.95rem;
+        }
+        .pub-title { font-weight: 600; color: var(--text); }
+        .pub-title a { color: var(--text); border-bottom: 1px solid transparent; }
+        .pub-title a:hover { color: var(--link); border-bottom-color: var(--link); text-decoration: none; }
+        .pub-authors, .pub-venue { color: var(--text-secondary); }
+        .pub-venue { font-style: italic; }
+        .me { font-weight: 600; color: var(--text); }
+        .tag {
+            display: inline-block;
+            font-size: 0.78rem;
+            color: var(--accent);
+            background: var(--bg-soft);
+            border: 1px solid var(--rule);
+            border-radius: 3px;
+            padding: 0 6px;
+            margin-left: 4px;
+            line-height: 1.6;
+            white-space: nowrap;
         }
 
         /* Footer */
         footer {
-            padding: 6rem 0 4rem;
-            text-align: center;
-        }
-
-        footer p {
+            padding: 36px 0 56px;
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
+            font-size: 0.9rem;
         }
-
-        .footer-links {
+        footer .footer-links {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
             flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 12px;
         }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            body {
-                padding: 0 3rem;
-            }
-
-            .publication-card {
-                grid-column: span 12;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 0 1.5rem;
-            }
-
-            .nav-content {
-                justify-content: center;
-                gap: 1.5rem;
-                padding: 1rem 1.5rem;
-            }
-
-            .hero {
-                padding: 4rem 0;
-                text-align: center;
-            }
-
-
-            .social-links {
-                justify-content: center;
-            }
-
-            .about {
-                padding: 2rem;
-            }
-
-            .section {
-                padding: 4rem 0;
-            }
-
-            .experience-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        footer .footer-links a { color: var(--text-secondary); }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-content">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    <nav>
+        <div class="nav-inner">
+            <span class="nav-brand">Handong Cui</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Handong Cui (Darren)</h1>
-            <h2><span class="roles">Ph.D. (HKU CS) | Researcher</span></h2>
-            <p style="color: var(--text-secondary); max-width: 700px; font-size: 1.05rem;">
-                Information security, Cryptography, Web3 Technologies.
-            </p>
-
-            <div class="social-links">
-                <a href="mailto:hdcui@cs.hku.hk" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://scholar.google.com/citations?user=UMA849sAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://orcid.org/0000-0002-2799-4709" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-                <a href="https://www.linkedin.com/in/darren-c-129a26204" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <div class="wrap">
+        <header class="site">
+            <img src="./hdcui.png" alt="Handong Cui" class="head-photo">
+            <div class="head-text">
+                <h1>Handong Cui (Darren)</h1>
+                <p class="tagline">Ph.D., Computer Science — The University of Hong Kong</p>
+                <p class="meta">FinTech, Blockchain, Cryptography</p>
+                <div class="social">
+                    <a href="mailto:hdcui@cs.hku.hk" title="Email"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://scholar.google.com/citations?user=UMA849sAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                    <a href="https://orcid.org/0000-0002-2799-4709" target="_blank" title="ORCID"><i class="fab fa-orcid"></i> ORCID</a>
+                    <a href="https://www.linkedin.com/in/darren-c-129a26204" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">About</h2>
-        <div class="about-content">
+        <section id="about" class="about">
+            <h2 class="section-title">About</h2>
             <p>
-                Handong Cui obtained his Ph.D. degree from the Department of Computer Science (CS) at The University of Hong Kong under the supervision of Prof. John T. H. Yuen and Prof. S. M. Yiu. He obtained his Bachelor of Engineering Degree from Sichuan University.
+                Darren is now a Research Scientist at <a href="https://www.clustertech.com/Corporate-Overview/ClusterTech" target="_blank">ClusterTech Limited</a>, working on DeFi algorithmic trading and AI agentic systems.
+            </p>
+            <p>
+                He obtained his Ph.D. degree from the <a href="https://www.cs.hku.hk/" target="_blank">Department of Computer Science (CS)</a> at The University of Hong Kong under the supervision of <a href="https://thyuen.github.io/" target="_blank">Prof. John T. H. Yuen</a> and <a href="https://www.cs.hku.hk/index.php/people/academic-staff/smyiu" target="_blank">Prof. S. M. Yiu</a>.
             </p>
             <p>
                 His research interests focus on cryptography, security and privacy issues in blockchain. Specifically, he works on zero-knowledge proofs, threshold ECDSA, secure multi-party computation and Web3 technologies.
             </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-grid">
-            <div class="experience-card">
-                <div class="experience-date">2025.10 – present</div>
-                <div class="experience-position">Web3 Research Scientist</div>
-                <div class="experience-company">ClusterTech Limited, Hong Kong SAR</div>
-            </div>
-            <div class="experience-card">
-                <div class="experience-date">2024.6 – 2025.9</div>
-                <div class="experience-position">Research Engineer (Cryptography)</div>
-                <div class="experience-company">China Mobile Internet Co., Ltd, Guangzhou</div>
-            </div>
-            <div class="experience-card">
-                <div class="experience-date">2022.4 – 2022.8</div>
-                <div class="experience-position">Student Trainee</div>
-                <div class="experience-company">APG Investment Asia Ltd, Hong Kong SAR</div>
-            </div>
-            <div class="experience-card">
-                <div class="experience-date">2019.2 – 2019.5</div>
-                <div class="experience-position">Research Intern</div>
-                <div class="experience-company"> Department of Computer Science, HKU</div>
-            </div>
-            <div class="experience-card">
-                <div class="experience-date">2018.7 – 2018.8</div>
-                <div class="experience-position">Research Intern</div>
-                <div class="experience-company"> Department of Computer Science, HKU</div>
-            </div>
-        </div>
-    </section>
+        <section id="publications">
+            <h2 class="section-title">Publications</h2>
+            <ol class="pubs">
+                <li>
+                    <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11112651/authors">DIDO+: Data Provenance from Restricted TLS 1.3 Websites with Selective Disclosure</a></span><br>
+                    <span class="pub-authors">Kwan Yin Chan, <span class="me">Handong Cui</span>, Tsz Hon Yuen, Siu Ming Yiu.</span><br>
+                    <span class="pub-venue">IEEE Transactions on Dependable and Secure Computing, 2025.</span>
+                    <span class="tag">CCF A</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="./compj-2023.pdf">Bandwidth-Efficient Zero-Knowledge Proofs for Threshold ECDSA</a></span><br>
+                    <span class="pub-authors"><span class="me">Handong Cui</span>, Kwan Yin Chan, Tsz Hon Yuen, Xin Kang, Cheng-Kang Chu.</span><br>
+                    <span class="pub-venue">The Computer Journal, Oxford University Press, 2023.</span>
+                    <span class="tag">CCF B</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="https://haiyangxc.github.io/hyxue/paper-doc/XAX21.pdf">Efficient Online-friendly Two-party ECDSA Signature</a></span><br>
+                    <span class="pub-authors">Haiyang Xue, Man Ho Au, Xiang Xie, Tsz Hon Yuen, <span class="me">Handong Cui</span>.</span><br>
+                    <span class="pub-venue">28th ACM Conference on Computer and Communications Security (CCS), 2021.</span>
+                    <span class="tag">CCF A</span><span class="tag">CORE A*</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="https://eprint.iacr.org/2021/205.pdf">Compact Zero-Knowledge Proofs for Threshold ECDSA with Trustless Setup</a></span><br>
+                    <span class="pub-authors">Tsz Hon Yuen, <span class="me">Handong Cui</span>, Xiang Xie.</span><br>
+                    <span class="pub-venue">24th International Conference on Practice and Theory of Public-Key Cryptography (PKC), 2021.</span>
+                    <span class="tag">CCF B</span><span class="tag">CORE B</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="https://eprint.iacr.org/2021/664.pdf">A Trustless GQ Multi-Signature Scheme with Identifiable Abort</a></span><br>
+                    <span class="pub-authors"><span class="me">Handong Cui</span>, Tsz Hon Yuen.</span><br>
+                    <span class="pub-venue">26th Australasian Conference on Information Security and Privacy (ACISP), Springer, 2021.</span>
+                    <span class="tag">CCF C</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="./rka-sm2.pdf">Security on SM2 and GOST Signatures against Related Key Attacks</a></span><br>
+                    <span class="pub-authors"><span class="me">Handong Cui</span>, Xianrui Qin, Cailing Cai, Tsz Hon Yuen.</span><br>
+                    <span class="pub-venue">20th IEEE International Conference On Trust, Security And Privacy In Computing And Communications (TrustCom), IEEE, 2021.</span>
+                    <span class="tag">CCF C</span><span class="tag">CORE A</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="./addr.pdf">Address-based Signature</a></span><br>
+                    <span class="pub-authors"><span class="me">Handong Cui</span>, Tsz Hon Yuen.</span><br>
+                    <span class="pub-venue">19th IEEE International Conference On Trust, Security And Privacy In Computing And Communications (TrustCom), IEEE, 2020.</span>
+                    <span class="tag">CCF C</span><span class="tag">CORE A</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="https://eprint.iacr.org/2023/1056.pdf">DIDO: Data Provenance from Restricted TLS 1.3 Websites</a></span><br>
+                    <span class="pub-authors">Kwan Yin Chan, <span class="me">Handong Cui</span>, Tsz Hon Yuen.</span><br>
+                    <span class="pub-venue">18th International Conference on Information Security Practice and Experience (ISPEC), Springer, 2023.</span>
+                    <span class="tag">CORE B</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="https://eprint.iacr.org/2023/1312.pdf">Efficient Multiplicative-to-Additive Function from Joye-Libert Cryptosystem and Its Application to Threshold ECDSA</a></span><br>
+                    <span class="pub-authors">Haiyang Xue, Man Ho Au, Mengling Liu, Kwan Yin Chan, <span class="me">Handong Cui</span>, Xiang Xie, Tsz Hon Yuen, Chengru Zhang.</span><br>
+                    <span class="pub-venue">30th ACM Conference on Computer and Communications Security (CCS), ACM, 2023.</span>
+                    <span class="tag">CCF A</span><span class="tag">CORE A*</span>
+                </li>
+                <li>
+                    <span class="pub-title"><a href="./acisp22.pdf">Multi-signatures for ECDSA and Its Applications in Blockchain</a></span><br>
+                    <span class="pub-authors">Shimin Pan, Kwan Yin Chan, <span class="me">Handong Cui</span>, Tsz Hon Yuen.</span><br>
+                    <span class="pub-venue">27th Australasian Conference on Information Security and Privacy (ACISP), Springer, 2022.</span>
+                    <span class="tag">CCF C</span>
+                </li>
+            </ol>
+        </section>
 
-    <!-- Publications Section -->
-    <section id="publications">
-        <h2 class="section-title">Publications</h2>
-        <div class="publications-grid">
-        <div class="publication-card">
-            <span class="publication-type">Journal</span>
-            <div class="publication-title">
-                <a href="https://ieeexplore.ieee.org/document/11112651/authors">DIDO+: Data Provenance from Restricted TLS 1.3 Websites with Selective Disclosure</a>
+        <footer id="contact">
+            <div class="footer-links">
+                <a href="mailto:hdcui@cs.hku.hk">Email</a>
+                <a href="https://scholar.google.com/citations?user=UMA849sAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank">Google Scholar</a>
+                <a href="https://orcid.org/0000-0002-2799-4709" target="_blank">ORCID</a>
+                <a href="https://www.linkedin.com/in/darren-c-129a26204" target="_blank">LinkedIn</a>
             </div>
-            <div class="publication-authors">Kwan Yin Chan, Handong Cui, Tsz Hon Yuen, Siu Ming Yiu.</div>
-            <div class="publication-venue">IEEE Transactions on Dependable and Secure Computing, 2025.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">SCI</span>
-                <span class="publication-tag">CCF A</span>
-                <span class="publication-tag">JCR Q1</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Journal</span>
-            <div class="publication-title">
-                <a href="./compj-2023.pdf">Bandwidth-Efficient Zero-Knowledge Proofs for Threshold ECDSA</a>
-            </div>
-            <div class="publication-authors">Handong Cui, Kwan Yin Chan, Tsz Hon Yuen, Xin Kang, Cheng-Kang Chu.</div>
-            <div class="publication-venue">The Computer Journal, Oxford University Press, 2023.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">SCI</span>
-                <span class="publication-tag">CCF B</span>
-                <span class="publication-tag">JCR Q2</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="https://haiyangxc.github.io/hyxue/paper-doc/XAX21.pdf">Efficient Online-friendly Two-party ECDSA Signature</a>
-            </div>
-            <div class="publication-authors">Haiyang Xue, Man Ho Au, Xiang Xie, Tsz Hon Yuen, Handong Cui.</div>
-            <div class="publication-venue">28th ACM Conference on Computer and Communications Security, 2021.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF A</span>
-                <span class="publication-tag">CORE A*</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="https://eprint.iacr.org/2021/205.pdf">Compact Zero-Knowledge Proofs for Threshold ECDSA with Trustless Setup</a>
-            </div>
-            <div class="publication-authors">Tsz Hon Yuen, Handong Cui, Xiang Xie.</div>
-            <div class="publication-venue">24th International Conference on Practice and Theory of Public-Key Cryptography, 2021.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF B</span>
-                <span class="publication-tag">CORE B</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="https://eprint.iacr.org/2021/664.pdf">A Trustless GQ Multi-Signature Scheme with Identifiable Abort</a>
-            </div>
-            <div class="publication-authors">Handong Cui, Tsz Hon Yuen.</div>
-            <div class="publication-venue">26th Australasian Conference on Information Security and Privacy, Springer, 2021.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF C</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="./rka-sm2.pdf">Security on SM2 and GOST Signatures against Related Key Attacks</a>
-            </div>
-            <div class="publication-authors">Handong Cui, Xianrui Qin, Cailing Cai, Tsz Hon Yuen.</div>
-            <div class="publication-venue">20th IEEE International Conference On Trust, Security And Privacy In Computing And Communications, IEEE, 2021.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF C</span>
-                <span class="publication-tag">CORE A</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="./addr.pdf">Address-based Signature</a>
-            </div>
-            <div class="publication-authors">Handong Cui, Tsz Hon Yuen.</div>
-            <div class="publication-venue">19th IEEE International Conference On Trust, Security And Privacy In Computing And Communications, IEEE, 2020.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF C</span>
-                <span class="publication-tag">CORE A</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="https://eprint.iacr.org/2023/1056.pdf">DIDO: Data Provenance from Restricted TLS 1.3 Websites</a>
-            </div>
-            <div class="publication-authors">Kwan Yin Chan, Handong Cui, Tsz Hon Yuen.</div>
-            <div class="publication-venue">18th International Conference on Information Security Practice and Experience, Springer, 2023.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CORE B</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="https://eprint.iacr.org/2023/1312.pdf">Efficient Multiplicative-to-Additive Function from Joye-Libert Cryptosystem and Its Application to Threshold ECDSA</a>
-            </div>
-            <div class="publication-authors">Haiyang Xue, Man Ho Au, Mengling Liu, Kwan Yin Chan, Handong Cui, Xiang Xie, Tsz Hon Yuen, Chengru Zhang.</div>
-            <div class="publication-venue">30th ACM Conference on Computer and Communications Security, ACM, 2023.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF A</span>
-                <span class="publication-tag">CORE A*</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="./acisp22.pdf">Multi-signatures for ECDSA and Its Applications in Blockchain</a>
-            </div>
-            <div class="publication-authors">Shimin Pan, Kwan Yin Chan, Handong Cui, Tsz Hon Yuen.</div>
-            <div class="publication-venue">27th Australasian Conference on Information Security and Privacy, Springer, 2022.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF C</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Conference</span>
-            <div class="publication-title">
-                <a href="https://github.com/darrenhdc/darrenhdc.github.io/blob/main/inscrypt2021.pdf">New location privacy preserving schemes based on ring signature over mobile social networks</a>
-            </div>
-            <div class="publication-authors">Cailing Cai, Tsz Hon Yuen, Handong Cui, Mingli Wu, Siu Ming Yiu.</div>
-            <div class="publication-venue">16th Information Security and Cryptology: 16th International Conference, Springer, 2021.</div>
-            <div class="publication-tags">
-                <span class="publication-tag">EI</span>
-                <span class="publication-tag">CCF C</span>
-            </div>
-        </div>
-        <div class="publication-card">
-            <span class="publication-type">Journal</span>
-            <div class="publication-title">
-                <a href="http://ictp.caict.ac.cn/CN/10.12267/j.issn.2096-5931.2025.07.012">The Latest Advances and Outlooks in Post-Quantum Cryptography Technology</a>
-            </div>
-            <div class="publication-authors">Feng Zhang, Yan Zhuang, Le Yu, Shuo Sun, Handong Cui, Yusheng Ma.</div>
-            <div class="publication-venue">Information and Communications Technology and Policy, China Academy of Information and Communications Technology, 2025.</div>
-            <div class="publication-tags"></div>
-        </div>
+            <p>© Handong Cui 2025</p>
+        </footer>
+    </div>
 
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Miscellaneous</h2>
-        <div class="content-grid">
-            <div class="content-card">
-                <h3>Patents</h3>
-                <ul>
-                    <li>零知识证明的方法、系统、装置、终端和存储介质<br>Handong Cui, et. al. CN Patent 202210615601.8, Nov 28, 2025.</li>
-                </ul>
-            </div>
-
-            <div class="content-card">
-                <h3>Projects</h3>
-                <ul>
-                    <li>
-                        <strong>密码应用技术创新与测试验证工业和信息化部重点实验室 2024 年创新研究课题</strong><br>
-                        项目名称: 全同态和后量子算法在人工智能领域中的应用研究<br>
-                        已结题: <a href="https://mp.weixin.qq.com/s/aoguOa6Jf_pf4eX95FhlPw" target="_blank" style="color: var(--accent-color);">优秀课题</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="content-card">
-                <h3>Teaching Assistantship</h3>
-                <ul>
-                    <li>[CSST9080] FinTech: Financial Inclusion, Emerging Markets and Social Value, UG, HKU, Spring 2022/2023.</li>
-                    <li>[FITE1010] Introduction to Financial Technology, UG, HKU, Fall 2020.</li>
-                    <li>[COMP3320] Electronic Commerce Technology, UG, HKU, Spring 2020.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-links">
-            <a href="mailto:hdcui@cs.hku.hk">Email</a>
-            <a href="https://scholar.google.com/citations?user=UMA849sAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank">Google Scholar</a>
-            <a href="https://orcid.org/0000-0002-2799-4709" target="_blank">ORCID</a>
-            <a href="https://www.linkedin.com/in/darren-c-129a26204" target="_blank">LinkedIn</a>
-        </div>
-        <p>Copyright © Handong Cui 2025 | The Digital Architect</p>
-    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </body>
 </html>
